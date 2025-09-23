@@ -14,6 +14,9 @@ public class Apple : MonoBehaviour
             Destroy(this.gameObject); // `this` refers to this instance of the Apple (script) component
             // So, Destroy(this); is not what we want. Rather, we want to destroy a GameObject from within
             // an attached component class.
+
+            ApplePicker apScript = Camera.main.GetComponent<ApplePicker>();
+            apScript.AppleMissed();
         }
     }
 }
